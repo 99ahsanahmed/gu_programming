@@ -2,16 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 const UserProfile = () => {
   const [edit, setEdit] = React.useState(false);
-  const edited = () => {
-    if (edit) {
-      
-    }
-  }
   const {usr_id} = useParams();
   return (
     <div className="h-screen bg-[#3B1A69] flex items-center justify-center p-4">
       <div className="bg-white shadow-lg rounded-lg max-w-md w-full">
-        {/* Header Section */}
+        
         <div className="flex flex-col items-center p-6">
           <img
             src="https://media.licdn.com/dms/image/v2/D4D03AQFpRscIgNJRVg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1681421050295?e=1740614400&v=beta&t=xyIoypQyIMLKdzfZWzGszdC2CAKmwJJmm5vPtXQjd9E"
@@ -22,7 +17,7 @@ const UserProfile = () => {
           <p className="text-gray-600">HTML developer.</p>
         </div>
 
-        {/* Info Section */}
+        
         <div className="border-t border-gray-200 p-6 grid grid-cols-2 gap-4">
           <div>
             <h3 className="text-sm font-semibold text-gray-500">Email</h3>
@@ -50,7 +45,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        {/* Footer */}
+        
         <div className="border-t border-gray-200 p-6 flex justify-center">
           <button
             className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"

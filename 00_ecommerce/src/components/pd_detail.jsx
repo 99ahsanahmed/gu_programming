@@ -28,15 +28,21 @@ const Product = () => {
         "https://muraqqa.shop/cdn/shop/collections/yasamine-june-x7WwgfzvALk-unsplash.jpg?v=1732784747&width=535",
     },
   ];
-  const product = card_details.find((card) => card.id === parseInt(pd_id)); //HAD THE IDEA, BUT LEARNED THIS FROM CHATGPT
+  //const product = card_details.find((card) => card.id === parseInt(pd_id)); //HAD THE IDEA, BUT LEARNED THIS FROM CHATGPT
+
+  let product;
+  for (let i = 0; i < card_details.length; i++) {
+    if (card_details[i].id === parseInt(pd_id)) {
+      product = card_details[i];
+      break;
+    }
+  } // c++ concepts in play 
 
   return (
     // PAGE
     <div className="h-screen flex justify-center items-center">
-      
       {/* Card */}
       <div className=" h-96 w-80 overflow-hidden hover:shadow-xl transition-all ease-in-out">
-        
         {/* Image */}
         <img src={product.image} alt="" />
 

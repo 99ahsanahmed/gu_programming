@@ -1,19 +1,28 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Murraqa_home from "../assets/images/muraqqa_home.jpeg";
 const Home = () => {
   return (
-    <div className="home">
-      <div className="top h-screen flex justify-center items-center flex-col ">
+    <div className="home relative">
+      {/* IMAGE */}
+      <div className='bg-black'>
+      <img src={Murraqa_home} alt="" className="mt-16 h-screen object-cover opacity-45" />
+      </div>
+
+      {/* TEXT */}
+      <div className="h-screen flex justify-center items-center flex-col absolute inset-0 text-white">
         <div>
-          <h1 className="text-9xl font-bold ">Muraqqa</h1>
-          <p className="text-left text-lg w-96 my-2">
+          <h1 className="text-9xl font-bold ">Muraqqa.</h1>
+          <p className="text-lg w-96 my-2 ">
             Our collection features designs and styles catering to individuals
             seeking both modesty and fashion. <br />
-            <div className="flex justify-between">
-              <button className="bg-[#3B1A69] text-white p-1 rounded-lg text-sm">
+
+            {/* BUTTON */}
+            <div className="flex justify-start gap-6 mt-4 pr-4">
+              <button className="bg-[#3B1A69] text-white p-2 rounded-lg text-sm">
                 Learn More
               </button>
-              <button className="bg-[#3B1A69] text-white p-1 rounded-lg text-sm">
+              <button className="bg-[#3B1A69] text-white p-2 rounded-lg text-sm">
                 <Link to="/products">Shop now</Link>
               </button>
             </div>
